@@ -1,3 +1,4 @@
+import files
 import nltk
 import pandas as pd
 from nltk.corpus import stopwords
@@ -7,6 +8,7 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.decomposition import LatentDirichletAllocation
 nltk.download('stopwords')
 nltk.download('punkt_tab')
+import json
 
 df = pd.read_csv('dataset.csv', encoding='utf-8')
 
@@ -35,39 +37,58 @@ def remove_stopwords(text):
 
     return text
 
+def extract_reviews(df):
+    reviews = []
+    for i, row in df.iterrows():
+
+        review = row['review_text']
+
+        # Filter wrongly typed reviews
+        if (type(review) != str):
+            continue
+
+        review = preprocess(row['review_text'])
+        reviews.append(review)
+        print(i)
+    return reviews
+
+def write_reviews_to_file(reviews):
+    with open("reviews.json", "w") as final:
+        json.dump(reviews, final)
+
 print("Corpus Length: " + str(len(df)))
 
-reviews = []
+#reviews = extract_reviews(df)
 
-for i, row in df.iterrows():
-    if i > 100:
-        break
+#write_reviews_to_file(reviews)
 
-    review = row['review_text']
+with open("reviews.json", "r") as final:
+    reviews = json.load(final)
 
-    #Filter wrongly typed reviews
-    if(type(review) != str):
-        continue
-
-    review = preprocess(row['review_text'])
-    reviews.append(review)
-    print(i)
-
-bowVectorizer = CountVectorizer()
+bowVectorizer = CountVectorizer(max_features=500)
 bow = bowVectorizer.fit_transform(reviews)
 bow = pd.DataFrame(bow.toarray(), columns=bowVectorizer.get_feature_names_out())
 
-tfidfVectorizer = TfidfVectorizer(use_idf=True, max_features=100,smooth_idf=True)
+print(bow)
+
+tfidfVectorizer = TfidfVectorizer(use_idf=True, max_features=500,smooth_idf=True)
 tfidf = tfidfVectorizer.fit_transform(reviews)
 tfidf = pd.DataFrame(tfidf.toarray(), columns=tfidfVectorizer.get_feature_names_out())
 
-LSA_model = TruncatedSVD(n_components=40, algorithm='randomized', n_iter=10)
+print(tfidf)
+
+LSA_model = TruncatedSVD(n_components=100, algorithm='randomized', n_iter=10)
 lsa = LSA_model.fit_transform(tfidf)
 
-lda_model = LatentDirichletAllocation(n_components=40,learning_method='online', random_state=42, max_iter=5)
+print("Review 1: ")
+for i,topic in enumerate(lsa[1]):
+    print("Topic ",i,": ",topic*100)
+
+
+lda_model = LatentDirichletAllocation(n_components=100,learning_method='online', random_state=42, max_iter=5)
 lda_top = lda_model.fit_transform(tfidf)
 
 print("Review 1: ")
-for i,topic in enumerate(lda_top[0]):
+for i,topic in enumerate(lda_top[1]):
     print("Topic ",i,": ",topic*100,"%")
 
