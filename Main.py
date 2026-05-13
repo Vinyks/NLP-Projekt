@@ -44,8 +44,6 @@ if __name__ == '__main__':
 
         return text
 
-
-
     #Funktion liest aus der CSV Datei die Bewertungen, vorverarbeitet sie und schreibt sie in eine Liste
     def extract_reviews(df):
         reviews = []
@@ -53,8 +51,8 @@ if __name__ == '__main__':
 
             review = row['review_text']
 
-            # Filter wrongly typed reviews
-            if (type(review) != str):
+            #Reviews die keine zeichenkette sind rausfiltern
+            if (type(review) != str or row['app_name'] not in valveGames):
                 continue
 
             review = preprocess(row['review_text'])
@@ -175,4 +173,3 @@ if __name__ == '__main__':
     print("Review 1 LDA: ")
     for i,topic in enumerate(lda_top[1]):
         print("Topic ",i,": ",topic*100, "%")
-
