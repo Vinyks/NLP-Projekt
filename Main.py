@@ -100,7 +100,7 @@ if __name__ == '__main__':
                 index = i
         best_topic_amount = index*stepsize+min_topics+1
 
-        print("Highes score for: " + str(best_topic_amount) + " Topics, with score of " + str(highest))
+        print("Highest score for: " + str(best_topic_amount) + " Topics, with score of " + str(highest))
 
         #Über gensim erneut mit der besten Themenanzahl das Modell trainieren
         lda_model = LdaModel(corpus=corpus, id2word=id2word, num_topics=best_topic_amount, passes=5, iterations=50,

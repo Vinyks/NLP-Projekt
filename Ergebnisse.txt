@@ -1,0 +1,114 @@
+Corpus Length: 270338
+For  11  Topics achieved score of:  0.4674451738536735
+For  12  Topics achieved score of:  0.4816572720028504
+For  13  Topics achieved score of:  0.4620577557294316
+For  14  Topics achieved score of:  0.5202605337868668
+For  15  Topics achieved score of:  0.48006744156094744
+For  16  Topics achieved score of:  0.4770625669470627
+For  17  Topics achieved score of:  0.516239224291357
+For  18  Topics achieved score of:  0.48374763457303493
+For  19  Topics achieved score of:  0.47074828975394967
+Highest score for: 14 Topics, with score of 0.5202605337868668
+
+ Topic 0:
+   counter, strike, terrorists, get, life, win, bomb, team, game, round, one, players, time, series, kill, map, valve, ban, shot, killed
+
+ Topic 1:
+   classic, game, offensive, global, good, graphics, strike, counter, still, worth, skins, nothing, better, source, gameplay, russians, ing, people, re, games
+
+ Topic 2:
+   game, love, great, still, playing, years, lt, it, awesome, really, recommend, cs, play, classic, like, steam, hours, im, would, good
+
+ Topic 3:
+   call, duty, bad, kills, connect, newer, gaem, com, better, please, sold, simulator, dis, childhood, battlefield, wallbangs, space, email, morning, sucked
+
+ Topic 4:
+   old, gold, school, recommended, cod, still, game, da, better, memories, highly, recomand, revolutionary, cos, shield, ads, lt, machine, dat, riot
+
+ Topic 5:
+   team, terrorist, game, play, counter, round, based, rescue, strike, popular, first, enemy, buy, role, person, success, action, hostages, take, affects
+
+ Topic 6:
+   life, money, waste, game, like, skills, ok, drops, looks, physics, got, bought, alright, mod, half, skins, ak, else, top, test
+
+ Topic 7:
+   counter, strike, game, cs, one, go, like, it, play, games, back, people, would, playing, buy, servers, get, time, source, first
+
+ Topic 8:
+   server, game, cool, join, got, gt, ing, version, servers, banned, steam, get, can, vac, play, cs, spanish, using, russian, would
+
+ Topic 9:
+   game, play, good, fun, it, still, old, like, played, time, great, playing, even, get, many, people, graphics, much, back, games
+
+ Topic 10:
+   best, game, ever, fps, one, games, played, shooter, time, still, world, made, online, classic, first, lt, multiplayer, strike, counter, cs
+
+ Topic 11:
+   csgo, fire, better, hole, menu, who, mother, story, everyone, classic, dollars, find, love, still, downloading, end, css, twilight, exciting, bad
+
+ Topic 12:
+   lol, true, addictive, somehow, forward, golden, amp, days, pls, crappy, him, last, dad, honestly, good, cuz, father, proves, delete, cocaine
+
+ Topic 13:
+   game, cs, good, go, nice, better, like, play, can, fps, time, source, buy, this, still, fun, legend, sucks, get, always
+
+
+      10  back  best  better  buy  ...  strike  team  time  would  years
+0      0     0     0       0    0  ...       0     0     0      0      0
+1      0     3     1       0    1  ...       6     0     2      0      1
+2      0     0     0       0    0  ...       0     0     0      0      0
+3      0     0     0       0    0  ...       0     0     0      0      0
+4      0     0     0       0    0  ...       0     0     0      0      0
+...   ..   ...   ...     ...  ...  ...     ...   ...   ...    ...    ...
+4996   0     0     0       0    0  ...       0     0     0      0      0
+4997   0     0     0       1    1  ...       0     0     0      0      0
+4998   0     0     0       0    0  ...       0     0     0      0      0
+4999   0     0     0       0    0  ...       0     0     0      0      0
+5000   0     0     0       0    0  ...       0     0     0      0      0
+
+[5001 rows x 50 columns]
+       10      back      best    better  ...  team      time  would     years
+0     0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+1     0.0  0.219768  0.041397  0.000000  ...   0.0  0.121457    0.0  0.064855
+2     0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+3     0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+4     0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+...   ...       ...       ...       ...  ...   ...       ...    ...       ...
+4996  0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+4997  0.0  0.000000  0.000000  0.371822  ...   0.0  0.000000    0.0  0.000000
+4998  0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+4999  0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+5000  0.0  0.000000  0.000000  0.000000  ...   0.0  0.000000    0.0  0.000000
+
+[5001 rows x 50 columns]
+Review 1 LSA: 
+Topic  0 :  46.18849744174352
+Topic  1 :  -9.382968240483496
+Topic  2 :  40.00069734762452
+Topic  3 :  -9.59892834110955
+Topic  4 :  -44.20924521667071
+Topic  5 :  -10.796515045876957
+Topic  6 :  -22.793505864469193
+Topic  7 :  -8.950292229560816
+Topic  8 :  -4.226041236037756
+Topic  9 :  -4.443508033060632
+Topic  10 :  -12.945338398209138
+Topic  11 :  -7.55143887519082
+Topic  12 :  -3.663442654867741
+Topic  13 :  -0.2026878660435214
+
+Review 1 LDA: 
+Topic  0 :  1.2689296045190706 %
+Topic  1 :  1.2689288143835973 %
+Topic  2 :  1.2689236236518397 %
+Topic  3 :  1.2689479965039516 %
+Topic  4 :  1.2689264580174855 %
+Topic  5 :  1.2689177754712635 %
+Topic  6 :  1.268917957093198 %
+Topic  7 :  1.2689200153059037 %
+Topic  8 :  1.2689219647808485 %
+Topic  9 :  1.2689269521263182 %
+Topic  10 :  1.2689396433529194 %
+Topic  11 :  1.268946884895267 %
+Topic  12 :  83.50392636132032 %
+Topic  13 :  1.2689259485780149 %
